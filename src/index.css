@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes kerala-wave {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-5px) rotate(1deg);
+  }
+  75% {
+    transform: translateY(5px) rotate(-1deg);
+  }
+}
+
+@keyframes kerala-pulse {
+  0%, 100% {
+    transform: scaleY(1);
+    background: linear-gradient(to top, #059669, #0d9488);
+  }
+  50% {
+    transform: scaleY(1.8);
+    background: linear-gradient(to top, #0d9488, #0891b2);
+  }
+}
+
+@keyframes kerala-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(5, 150, 105, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(5, 150, 105, 0.6), 0 0 40px rgba(13, 148, 136, 0.4);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out;
+}
+
+.animate-kerala-wave {
+  animation: kerala-wave 3s ease-in-out infinite;
+}
+
+.animate-kerala-glow {
+  animation: kerala-glow 2s ease-in-out infinite;
+}
+
+/* Enhanced scrollbar with Kerala-inspired colors */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, #f0fdfa, #ecfdf5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #14b8a6, #059669);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #0d9488, #047857);
+  box-shadow: 0 0 10px rgba(5, 150, 105, 0.3);
+}
+
+/* Smooth animations and transitions */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced focus styles with Kerala theme */
+button:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* Backdrop blur support with fallback */
+.backdrop-blur-sm {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.backdrop-blur-lg {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Kerala-inspired gradient backgrounds */
+.bg-kerala-gradient {
+  background: linear-gradient(135deg, #059669 0%, #0d9488 25%, #14b8a6 50%, #0891b2 75%, #0284c7 100%);
+}
+
+.bg-kerala-sunset {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 25%, #dc2626 50%, #be185d 75%, #9333ea 100%);
+}
+
+/* Enhanced text gradients */
+.text-kerala-gradient {
+  background: linear-gradient(135deg, #059669, #0d9488, #14b8a6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Custom animations for voice visualizer */
+.kerala-voice-bar {
+  animation: kerala-pulse 1.2s ease-in-out infinite;
+}
+
+/* Floating animation for decorative elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Subtle hover effects */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Enhanced button hover states */
+.btn-kerala {
+  background: linear-gradient(135deg, #059669, #0d9488);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-kerala::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-kerala:hover::before {
+  left: 100%;
+}
+
+.btn-kerala:hover {
+  background: linear-gradient(135deg, #047857, #0f766e);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(5, 150, 105, 0.3);
+}
+
+/* Responsive design enhancements */
+@media (max-width: 640px) {
+  .backdrop-blur-sm,
+  .backdrop-blur-md,
+  .backdrop-blur-lg {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(255, 255, 255, 0.95);
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
