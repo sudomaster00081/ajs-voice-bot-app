@@ -58,7 +58,7 @@ Ever wondered what it's like to be an AI professional from God's Own Country? No
 ### Step 2: Clone & Run
 ```bash
 # Clone this masterpiece
-git clone <your-repo-url>
+git clone [<your-repo-url>](https://github.com/sudomaster00081/ajs-voice-bot-app.git)
 cd voice-bot-app
 
 # Install dependencies (Node.js required)
